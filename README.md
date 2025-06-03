@@ -12,3 +12,5 @@ While scoping this project, you acknowledge that the sport has changed a lot ove
 You assume a **10% significance level**, and use the following null and alternative hypotheses:
 - $H_0$ : The mean number of goals scored in women's international soccer matches is the same as men's.
 - $H_A$ : The mean number of goals scored in women's international soccer matches is greater than men's.
+
+Machine learning was applied in this project.
