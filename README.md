@@ -1,4 +1,4 @@
-Note that this project was performed both in Python & in R.
+# Hypothesis Testing with Men's & Women's Soccer Matches (Python & R)
 
 **Background:** You're working as a sports journalist at a major online sports media company, specializing in soccer analysis and reporting. You've been watching both men's and women's international soccer matches for a number of years, and your gut instinct tells you that more goals are scored in women's international football matches than men's. This would make an interesting investigative article that your subscribers are bound to love, but you'll need to perform a valid statistical hypothesis test to be sure!
 
