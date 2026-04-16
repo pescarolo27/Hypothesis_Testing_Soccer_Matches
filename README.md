@@ -15,4 +15,4 @@ You assume a **10% significance level**, and use the following null and alternat
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Machine learning was applied in this project. In the directory for the R files, they only contain code. To see the associated results, the files would have to be opened in R studio or some other compatible software.
+Machine learning was not applied in this project. In the directory for the R files, they only contain code. To see the associated results, the files would have to be opened in R studio or some other compatible software.
