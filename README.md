@@ -1,17 +1,26 @@
 # Hypothesis Testing with Men's & Women's Soccer Matches (Python & R)
 
-**Background:** You're working as a sports journalist at a major online sports media company, specializing in soccer analysis and reporting. You've been watching both men's and women's international soccer matches for a number of years, and your gut instinct tells you that more goals are scored in women's international football matches than men's. This would make an interesting investigative article that your subscribers are bound to love, but you'll need to perform a valid statistical hypothesis test to be sure!
+**Background:** You're working as a sports journalist at a major online sports media company, specializing in soccer analysis and reporting. You've been watching both men's and women's international soccer matches for a number of years, and your gut instinct tells you that more goals are scored in women's international football matches than men's. This would make an interesting investigative article that your subscribers are bound to love, but you'll need to perform a valid statistical hypothesis test to be sure.
 
-While scoping this project, you acknowledge that the sport has changed a lot over the years, and performances likely vary a lot depending on the tournament, so you decide to limit the data used in the analysis to only official `FIFA World Cup` matches (not including qualifiers) since `2002-01-01`.
+**The Data:** While scoping this project, you acknowledge that the sport has changed a lot over the years, and performances likely vary a lot depending on the tournament, so you decide to limit the data used in the analysis to only official **FIFA World Cup** matches (not including qualifiers) since **2002-01-01**.
 
-**The Data:** You create two datasets containing the results of every official men's and women's international football match since the 19th century, which you scraped from a reliable online source. This data is stored in two CSV files: `women_results.csv` and `men_results.csv`.
+You create two datasets containing the results of every official men's and women's international football match since the 19th century, which you scraped from a reliable online source. This data is stored in two CSV files: `women_results.csv` and `men_results.csv`. Both contain the same variables.
 
-**The Purpose:** The question you are trying to determine the answer to is:
-> Are more goals scored in women's international soccer matches than men's?
+This project was done both in Python & R in October, 2025 & June, 2025 respectively. For the R version of the project, it is important to note the Python write up is coded for a R environment. Files were attached both for code based in R (the ".R" files) as well as a project write-up done in Python containing code meant for R. The two R files pertain to the two main sections in the Python file--an initial review & manipulation of the data, then statistical analyses. Running the Python write up with the R code will produce errors in the code cells & destroy the results that are currently contained in it.
 
-You assume a **10% significance level**, and use the following null and alternative hypotheses:
-- $H_0$ : The mean number of goals scored in women's international soccer matches is the same as men's.
-- $H_A$ : The mean number of goals scored in women's international soccer matches is greater than men's.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-These projects were done in June & October, 2025 (R, Python respectively).
-Machine learning was not applied in this project. In the directory for the R files, they only contain code. To see the associated results, the files would have to be opened in R studio or some other compatible software.
+### Brief Summary
+This project explores international soccer matches from women's & men's tournaments, specifically those in the FIFA World Cup since 2002. Statistical techniques, particularly hypothesis testing, were utilized to evaluate these games & come to a meaningful conclusion as to whether more goals were scored in women's soccer matches than in men's on average. Such analyses can produce quantifiable metrics that can meaningfully assess the significance of such a difference, if it exists, thus allowing a valid inference to be made.  
+The null & alternative hypotheses are listed below. A significance level of 10% was defined.
+- $H_0$ : The mean number of goals scored in women's international soccer matches is _the same_ as men's.
+- $H_A$ : The mean number of goals scored in women's international soccer matches is _greater_ than men's.
+
+Of the data available, it contained women's soccer matches between 1969-2022 & men's matches between 1872-2022. Each dataset had at least 4,800 matches. When restricted to FIFA World Cup games since 2002, there are 200 women's games & 384 men's games which is a reasonable sample size for representative statistical analyses. No manipulation was done to the datasets apart from one data type change & the addition of a variable indicating the total number of goals scored in each match.
+
+Of the 200 women's games, between zero & 13 goals were scored. 2.98 were scored on average. For the 384 men's games, between zero & eight were scored, & the average was about 2.51 per match. Given the distributions of these data points, a half-goal difference can be considered notable & favorable of the alternative hypothesis--more goals were scored on average in women's matches than in men's. To assess the full extent of the significance of this disparity, hypothesis testing was utilized.
+
+Ultimately, a one-tailed, non-parametric Wilcoxon-Mann-Whitney hypothesis test was used due to multiple reasons. Firstly, the distributions of the test statistic for both datasets were not normal which violates the standards for parametric tests. The nature of the problem, in which two averages from independent samples are being compared, calls for an unpaired, two-sample test. Given these factors, this hypothesis test was chosen.
+
+The test produced a p-value of about 0.51% which is significantly below the pre-established significance level of 10%. In other words, this result indicates that if there was no difference in the average number of goals scored between women's & men's soccer matches (among FIFA World Cup matches since 2002), then the likelihood of seeing the observed difference in average goals scored or more between the two groups (about 0.47 goals) is about 0.51%. Given that this probability of observing such a difference is less than the pre-established significance level of 10%, there is enough statistical evidence to reject the null hypothesis in favor of the alternative. In other words, such a small probability of seeing this large a difference (0.47 goals) indicates how unlikely it is, giving sufficient credence to the potential of the null hypothesis being incorrect.
+> In summary, since 2002, there is enough evidence to state that the average number of goals scored in women's soccer matches in the FIFA World Cup is meaningfully greater than that of men's matches.
