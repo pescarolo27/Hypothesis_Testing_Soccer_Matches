@@ -6,7 +6,7 @@
 
 You create two datasets containing the results of every official men's and women's international football match since the 19th century, which you scraped from a reliable online source. This data is stored in two CSV files: `women_results.csv` and `men_results.csv`. Both contain the same variables.
 
-This project was done both in Python & R in October, 2025 & June, 2025 respectively. For the R version of the project, it is important to note the Python write up is coded for a R environment. Files were attached both for code based in R (the ".R" files) as well as a project write-up done in Python containing code meant for R. The two R files pertain to the two main sections in the Python file--an initial review & manipulation of the data, then statistical analyses. Running the Python write up with the R code will produce errors in the code cells & destroy the results that are currently contained in it.
+This project was done both in Python & R in October, 2025 & June, 2025 respectively. For the R version of the project, it is important to note the Python write up is coded for a R environment. Files were attached both for code based in R (the ".R" files) as well as a project write-up done in Python that contains code meant for R. The two R files pertain to the two main sections in the Python file--an initial review & manipulation of the data, then statistical analyses. Running the Python write up with the R code will produce errors in the code cells & destroy the results that are currently contained in it.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
